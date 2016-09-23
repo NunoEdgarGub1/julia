@@ -4016,6 +4016,7 @@ static std::unique_ptr<Module> emit_function(jl_method_instance_t *lam, jl_code_
     ctx.source = src;
     ctx.code = code;
     ctx.name = jl_symbol_name(lam->def ? lam->def->name : anonymous_sym);
+    jl_printf(JL_STDERR, "emit_function(%s)\n", ctx.name);
     ctx.funcName = ctx.name;
     ctx.vaSlot = -1;
     ctx.vaStack = false;
